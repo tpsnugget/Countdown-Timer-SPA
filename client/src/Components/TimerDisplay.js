@@ -20,13 +20,21 @@ const TimerDisplay = props => {
                 </Typography>
                 : null}
             </Grid>
-            <Grid container alignItems='center'>
-                <Grid item xs={3}>
+            <Grid container justify='center' alignItems='center'>
+                {sec === 0 ?
+                <Grid item xs={4}>
                     <Typography variant='h1'data-testid='Timerdisplay-time' >
-                        {min} : {sec}
+                        {min} : 00
                     </Typography>
                 </Grid>
-                <Grid item xs={9}>
+                :
+                <Grid item xs={4}>
+                <Typography variant='h1'data-testid='Timerdisplay-time' >
+                    {min} : {sec}
+                </Typography>
+                </Grid>
+                }
+                <Grid item xs={1}>
                 {pause ?
                     <Button>
                         <PlayCircleOutlineIcon style={{fontSize: '4rem'}} />

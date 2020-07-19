@@ -30,14 +30,14 @@ const Input = props => {
                 </TextField>
             </Grid>
             <Grid item xs={12} md={2}>
-                {time === 0 ?
-                    <Button variant="contained" color="primary" disabled >
+                {time >= 1 ?
+                    <Button variant="contained" color="primary" >
                         <Typography variant='h4' >
                             START
                         </Typography>
                     </Button>
                     :
-                    <Button variant="contained" color="primary" data-testid='button' onClick={sendBackStartTimer} >
+                    <Button variant="contained" data-testid='button' disabled onClick={sendBackStartTimer} >
                         <Typography variant='h4' >
                             START
                         </Typography>
@@ -51,7 +51,8 @@ const Input = props => {
 
 Input.propTypes = {
     setTime: PropTypes.func,
-    startTimer: PropTypes.func
+    startTimer: PropTypes.func,
+    time: PropTypes.number
 }
 
 export default Input

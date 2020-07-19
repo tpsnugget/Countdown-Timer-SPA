@@ -3,6 +3,7 @@ import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Input from '../Components/Input'
 import TimerDisplay from '../Components/TimerDisplay'
+import ControlButtons from '../Components/ControlButtons'
 
 export default class CountdownTimer extends Component {
 
@@ -10,15 +11,14 @@ export default class CountdownTimer extends Component {
         min: 0,
         moreThanHalfwayThere: false,
         pause: false,
-        sec: 59,
+        sec: 0,
         time: 0
     }
 
     setTime = (value) => {
         this.setState({
             min: Number(value),
-            time: Number(value),
-            sec: 0
+            time: Number(value)
         })
     }
 
@@ -28,13 +28,14 @@ export default class CountdownTimer extends Component {
 
     render() {
 
-        const { min, moreThanHalfwayThere, pause, sec } = this.state
+        const { min, moreThanHalfwayThere, pause, sec, time } = this.state
 
         return (
             <Box style={{marginTop: '15rem'}} >
-                <Container>
-                    <Input setTime={this.setTime} startTimer={this.startTimer} />
+                <Container >
+                    <Input setTime={this.setTime} time={time} startTimer={this.startTimer} />
                     <TimerDisplay min={min} sec={sec} moreThanHalfwayThere={moreThanHalfwayThere} pause={pause}  />
+                    <ControlButtons />
                 </Container>
             </Box>
         )
