@@ -14,7 +14,7 @@ const ControlButtons = props => {
         <Grid container justify='center' style={{marginTop: '3rem'}}>
             <Grid item xs={12} md={2} style={{marginBottom: '1rem'}}>
                 {oneXButton ?
-                    <Button variant="contained" color="primary" style={{width: '150px'}} >
+                    <Button data-testid='ControlButtons-oneX' variant="contained" color="primary" style={{width: '150px'}} >
                         <Typography variant='h4'>
                             1X
                         </Typography>
@@ -35,7 +35,7 @@ const ControlButtons = props => {
                         </Typography>
                     </Button>
                     :
-                    <Button variant="contained" style={{width: '150px'}} >
+                    <Button data-testid='ControlButtons-onePointFiveX' variant="contained" style={{width: '150px'}} >
                         <Typography variant='h4'>
                             1.5X
                         </Typography>
@@ -50,7 +50,7 @@ const ControlButtons = props => {
                         </Typography>
                     </Button>
                     :
-                    <Button variant="contained" style={{width: '150px'}} >
+                    <Button data-testid='ControlButtons-twoX' variant="contained" style={{width: '150px'}} >
                         <Typography variant='h4'>
                             2X
                         </Typography>

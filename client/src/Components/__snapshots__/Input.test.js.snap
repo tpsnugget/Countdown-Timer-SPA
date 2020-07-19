@@ -55,9 +55,10 @@ exports[`<Input /> 1`] = `
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained Mui-disabled Mui-disabled"
       data-testid="button"
-      tabindex="0"
+      disabled=""
+      tabindex="-1"
       type="button"
     >
       <span
@@ -69,9 +70,6 @@ exports[`<Input /> 1`] = `
           START
         </h4>
       </span>
-      <span
-        class="MuiTouchRipple-root"
-      />
     </button>
   </div>
 </div>

@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import Input from './Input'
 
 test('<Input />', () => {
-    const { container, getByRole, getByTestId } = render(<Input />)
+    const { container, getByTestId } = render(<Input />)
 
     // Take a snapshot
     expect(container.firstChild).toMatchSnapshot()

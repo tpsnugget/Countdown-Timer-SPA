@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import TimerDisplay from './TimerDisplay'
 
 test('<TimerDisplay />', () => {
-    const { container, getByRole, getByTestId } = render(<TimerDisplay />)
+    const { container, getByTestId } = render(<TimerDisplay />)
 
     // Take a snapshot
     expect(container.firstChild).toMatchSnapshot()

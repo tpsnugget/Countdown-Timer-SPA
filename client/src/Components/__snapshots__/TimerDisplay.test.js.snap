@@ -7,18 +7,12 @@ exports[`<TimerDisplay /> 1`] = `
 >
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
-  >
-    <h6
-      class="MuiTypography-root MuiTypography-h6"
-    >
-      More than halfway there!
-    </h6>
-  </div>
+  />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+    class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
     >
       <h1
         class="MuiTypography-root MuiTypography-h1"
@@ -28,7 +22,7 @@ exports[`<TimerDisplay /> 1`] = `
       </h1>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1"
     >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text"

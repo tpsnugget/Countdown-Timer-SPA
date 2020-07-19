@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ControlButtons /> 1`] = `
+<div
+  class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+  style="margin-top: 3rem;"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
+    style="margin-bottom: 1rem;"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+      data-testid="ControlButtons-oneX"
+      style="width: 150px;"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4"
+        >
+          1X
+        </h4>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
+    style="margin-bottom: 1rem;"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+      data-testid="ControlButtons-onePointFiveX"
+      style="width: 150px;"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4"
+        >
+          1.5X
+        </h4>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
+  >
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+      data-testid="ControlButtons-twoX"
+      style="width: 150px;"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4"
+        >
+          2X
+        </h4>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</div>
+`;
