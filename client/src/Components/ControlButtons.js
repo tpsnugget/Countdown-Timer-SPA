@@ -10,6 +10,24 @@ const ControlButtons = props => {
     const [onePointFiveXButton, setOnePointFiveXButton] = useState(false)
     const [twoXButton, setTwoXButton] = useState(false)
 
+    const runAtOneSpeed = async () => {
+        await setOneXButton(true)
+        await setOnePointFiveXButton(false)
+        await setTwoXButton(false)
+    }
+
+    const runAtOnePointFiveSpeed = async () => {
+        await setOneXButton(false)
+        await setOnePointFiveXButton(true)
+        await setTwoXButton(false)
+    }
+
+    const runAtTwoSpeed = async () => {
+        await setOneXButton(false)
+        await setOnePointFiveXButton(false)
+        await setTwoXButton(true)
+    }
+
     return (
         <Grid container justify='center' style={{marginTop: '3rem'}}>
             <Grid item xs={12} md={2} style={{marginBottom: '1rem'}}>
@@ -20,7 +38,7 @@ const ControlButtons = props => {
                         </Typography>
                     </Button>
                     :
-                    <Button variant="contained" style={{width: '150px'}} >
+                    <Button variant="contained" style={{width: '150px'}} onClick={runAtOneSpeed} >
                         <Typography variant='h4'>
                             1X
                         </Typography>
@@ -35,7 +53,7 @@ const ControlButtons = props => {
                         </Typography>
                     </Button>
                     :
-                    <Button data-testid='ControlButtons-onePointFiveX' variant="contained" style={{width: '150px'}} >
+                    <Button data-testid='ControlButtons-onePointFiveX' variant="contained" style={{width: '150px'}} onClick={runAtOnePointFiveSpeed} >
                         <Typography variant='h4'>
                             1.5X
                         </Typography>
@@ -50,7 +68,7 @@ const ControlButtons = props => {
                         </Typography>
                     </Button>
                     :
-                    <Button data-testid='ControlButtons-twoX' variant="contained" style={{width: '150px'}} >
+                    <Button data-testid='ControlButtons-twoX' variant="contained" style={{width: '150px'}} onClick={runAtTwoSpeed} >
                         <Typography variant='h4'>
                             2X
                         </Typography>
