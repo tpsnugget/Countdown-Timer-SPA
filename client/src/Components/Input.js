@@ -7,7 +7,11 @@ import Button from '@material-ui/core/Button'
 
 const Input = props => {
 
-    const { setTime, time } = props
+    const { setTime, startTimer, time } = props
+
+    const sendBackStartTimer = () => {
+        startTimer()
+    }
 
     const sendTimeToCountdownTimer = (e) => {
         setTime(e.target.value)
@@ -33,7 +37,7 @@ const Input = props => {
                         </Typography>
                     </Button>
                     :
-                    <Button variant="contained" color="primary" data-testid='button' >
+                    <Button variant="contained" color="primary" data-testid='button' onClick={sendBackStartTimer} >
                         <Typography variant='h4' >
                             START
                         </Typography>
@@ -47,7 +51,7 @@ const Input = props => {
 
 Input.propTypes = {
     setTime: PropTypes.func,
-    time: PropTypes.number
+    startTimer: PropTypes.func
 }
 
 export default Input

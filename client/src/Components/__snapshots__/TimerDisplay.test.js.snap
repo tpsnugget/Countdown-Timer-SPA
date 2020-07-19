@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimerDisplay /> 1`] = `
+<div
+  class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  style="margin-top: 3rem;"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6"
+    >
+      More than halfway there!
+    </h6>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h1"
+        data-testid="Timerdisplay-time"
+      >
+         : 
+      </h1>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text"
+        data-testid="button"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            style="font-size: 4rem;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
