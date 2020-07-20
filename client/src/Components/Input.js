@@ -31,13 +31,13 @@ const Input = props => {
             </Grid>
             <Grid item xs={12} md={2}>
                 {time >= 1 ?
-                    <Button variant="contained" color="primary" >
+                    <Button variant="contained" color="primary" onClick={sendBackStartTimer} >
                         <Typography variant='h4' >
                             START
                         </Typography>
                     </Button>
                     :
-                    <Button variant="contained" data-testid='button' disabled onClick={sendBackStartTimer} >
+                    <Button variant="contained" data-testid='button' disabled >
                         <Typography variant='h4' >
                             START
                         </Typography>

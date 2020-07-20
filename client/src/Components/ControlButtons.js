@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -6,26 +6,20 @@ import Button from '@material-ui/core/Button'
 
 const ControlButtons = props => {
 
-    const [oneXButton, setOneXButton] = useState(true)
-    const [onePointFiveXButton, setOnePointFiveXButton] = useState(false)
-    const [twoXButton, setTwoXButton] = useState(false)
+    console.log('ControlButtons Rendered')
 
-    const runAtOneSpeed = async () => {
-        await setOneXButton(true)
-        await setOnePointFiveXButton(false)
-        await setTwoXButton(false)
+    const { oneXButton, onePointFiveXButton, twoXButton, runAtOne, runAtOnePointFive, runAtTwo } = props
+
+    const runAtOneSpeed = () => {
+        runAtOne()
     }
 
-    const runAtOnePointFiveSpeed = async () => {
-        await setOneXButton(false)
-        await setOnePointFiveXButton(true)
-        await setTwoXButton(false)
+    const runAtOnePointFiveSpeed = () => {
+        runAtOnePointFive()
     }
 
-    const runAtTwoSpeed = async () => {
-        await setOneXButton(false)
-        await setOnePointFiveXButton(false)
-        await setTwoXButton(true)
+    const runAtTwoSpeed = () => {
+        runAtTwo()
     }
 
     return (
@@ -80,7 +74,12 @@ const ControlButtons = props => {
 }
 
 ControlButtons.propTypes = {
-
+    oneXButton: PropTypes.bool,
+    onePointFiveXButton: PropTypes.bool,
+    twoXButton: PropTypes.bool,
+    runAtOne: PropTypes.func,
+    runAtOnePointFive: PropTypes.func,
+    runAtTwo: PropTypes.func
 }
 
 export default ControlButtons
