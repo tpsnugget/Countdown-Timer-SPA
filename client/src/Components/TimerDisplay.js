@@ -15,10 +15,11 @@ const TimerDisplay = props => {
     const [pauseCount, setPauseCount] = useState(true)
     const [min, setMin] = useState(0)
     const [sec, setSec] = useState(0)
-    const [totalSec, setTotalSec] = useState(0)
+    const [totalSec, setTotalSec] = useState(10)
     const [oneXButton, setOneXButton] = useState(true)
     const [onePointFiveXButton, setOnePointFiveXButton] = useState(false)
     const [twoXButton, setTwoXButton] = useState(false)
+    const [keepRunning, setKeepRunning] = useState(true)
     
     useEffect( () => {
 
@@ -81,6 +82,14 @@ const TimerDisplay = props => {
                 }, 500 )
             }
         }
+
+        if(totalSec === 0){
+            setKeepRunning(false)
+            setPauseCount(true)
+            setMin(0)
+            setSec(0)
+        }
+
     } )
 
     const runAtOneSpeed = async () => {
@@ -106,14 +115,19 @@ const TimerDisplay = props => {
     return (
         <Grid container justify='center' alignItems='center' style={{marginTop: '3rem'}} >
             <Grid container justify='center' item xs={12}>
-                {(totalSec <= halfway) && (totalSec > 20) ?
+                {keepRunning && start && (totalSec <= halfway) && (totalSec > 20) ?
                 <Typography variant='h6' >
                     More than halfway there!
                 </Typography>
                 : null}
-                {(totalSec <= halfway) && (totalSec <= 20) ?
+                {keepRunning && start && (totalSec <= halfway) && (totalSec <= 20) ?
                 <Typography variant='h6' style={{color: 'red'}} >
                     More than halfway there!
+                </Typography>
+                : null}
+                {!keepRunning ?
+                <Typography variant='h6' >
+                    Time's Up!
                 </Typography>
                 : null}
             </Grid>
