@@ -9,12 +9,10 @@ export default class CountdownTimer extends Component {
     state = {
         minute: 0,
         msec: 0,
-        // pause: true,
         moreThanHalfwayThere: false,
         runAtOneXSpeed: true,
         runAtOnePointFiveXSpeed: false,
         runAtTwoXSpeed: false,
-        // seconds: 0,
         start: false,
         time: 0,
         totalSec: 0

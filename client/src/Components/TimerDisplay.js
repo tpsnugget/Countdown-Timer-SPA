@@ -131,8 +131,6 @@ const TimerDisplay = props => {
 TimerDisplay.propTypes = {
     minute: PropTypes.number,
     moreThanHalfwayThere: PropTypes.bool,
-    // pause: PropTypes.bool,
-    // sec: PropTypes.number
 }
 
 export default TimerDisplay
