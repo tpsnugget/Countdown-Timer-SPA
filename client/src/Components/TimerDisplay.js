@@ -152,26 +152,36 @@ const TimerDisplay = props => {
     return (
         <Grid container justify='center' alignItems='center' style={{ marginTop: '3rem' }} >
             <Grid container justify='center' item xs={12}>
+
                 {keepRunning && start && (totalSec <= halfway) && (totalSec > 20) ?
                     <Typography variant='h6' >
                         More than halfway there!
-                </Typography>
+                    </Typography>
                     : null}
-                {keepRunning && start && (totalSec <= halfway) && (totalSec <= 20) ?
+
+                {keepRunning && start && (totalSec <= halfway) && (totalSec > 10) && (totalSec <= 20) ?
                     <Typography variant='h6' style={{ color: 'red' }} >
                         More than halfway there!
-                </Typography>
+                    </Typography>
                     : null}
+
+                {/* This sets up the blinking text, and yes I realize this is terrible!! */}
+                {keepRunning && start && (totalSec <= halfway) && (totalSec <= 10) && (totalSec % 2 === 0) ?
+                    <Typography variant='h6' style={{ color: 'red' }} >
+                        More than halfway there!
+                    </Typography>
+                    : null}
+
                 {!keepRunning ?
                     <Typography variant='h6' >
                         Time's Up!
-                </Typography>
+                    </Typography>
                     : null}
             </Grid>
             <Grid container justify='center' alignItems='center'>
 
             {countDownDisplay}
-            
+
                 <Grid item xs={1}>
                     {pauseCount ?
                         <Button>
