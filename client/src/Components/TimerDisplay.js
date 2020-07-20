@@ -48,8 +48,7 @@ const TimerDisplay = props => {
                 }, 1000 )
             }
         }
-
-        if(!pauseCount && onePointFiveXButton){
+        else if(!pauseCount && onePointFiveXButton){
             if(start && (totalSec % 60 === 0)){
                 setTimeout( () => {
                     setMin((totalSec / 60) - 1)
@@ -65,8 +64,7 @@ const TimerDisplay = props => {
                 }, 750 )
             }
         }
-
-        if(!pauseCount && twoXButton){
+        else if(!pauseCount && twoXButton){
             if(start && (totalSec % 60 === 0)){
                 setTimeout( () => {
                     setMin((totalSec / 60) - 1)
