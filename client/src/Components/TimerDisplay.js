@@ -157,26 +157,42 @@ const TimerDisplay = props => {
                     <Typography variant='h6' >
                         More than halfway there!
                     </Typography>
-                    : null}
+                    :
+                    <Typography variant='h6' style={{color: 'white'}} >
+                        X
+                    </Typography>
+                    }
 
                 {keepRunning && start && (totalSec <= halfway) && (totalSec > 10) && (totalSec <= 20) ?
                     <Typography variant='h6' style={{ color: 'red' }} >
                         More than halfway there!
                     </Typography>
-                    : null}
+                    :
+                    <Typography variant='h6' style={{color: 'white'}} >
+                        X
+                    </Typography>
+                    }
 
                 {/* This sets up the blinking text, and yes I realize this is terrible!! */}
                 {keepRunning && start && (totalSec <= halfway) && (totalSec <= 10) && (totalSec % 2 === 0) ?
                     <Typography variant='h6' style={{ color: 'red' }} >
                         More than halfway there!
                     </Typography>
-                    : null}
+                    :
+                    <Typography variant='h6' style={{color: 'white'}} >
+                        X
+                    </Typography>
+                    }
 
                 {!keepRunning ?
                     <Typography variant='h6' >
                         Time's Up!
                     </Typography>
-                    : null}
+                    :
+                    <Typography variant='h6' style={{color: 'white'}} >
+                        X
+                    </Typography>
+                    }
             </Grid>
             <Grid container justify='center' alignItems='center'>
 
