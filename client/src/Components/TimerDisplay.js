@@ -15,22 +15,22 @@ const TimerDisplay = props => {
     const [pauseCount, setPauseCount] = useState(true)
     const [min, setMin] = useState(0)
     const [sec, setSec] = useState(0)
-    const [totalSec, setTotalSec] = useState(1)
+    const [totalSec, setTotalSec] = useState(0)
     const [oneXButton, setOneXButton] = useState(true)
     const [onePointFiveXButton, setOnePointFiveXButton] = useState(false)
     const [twoXButton, setTwoXButton] = useState(false)
     
     useEffect( () => {
-        if(start && sec === 0){
-            console.log('start is true and sec === 0')
-            setSec(59)
-        }
+        // if(start && sec === 0){
+        //     console.log('start is true and sec === 0')
+        //     setSec(59)
+        // }
 
         if(start && sec === 0){
             if(halfway === 0){
                 console.log('halfway === 0')
                 setPauseCount(false)
-                setMin(minute - 1)
+                // setMin(minute - 1)
                 setTotalSec(minute * 60)
                 setHalfway(minute * 60 / 2)
             }
@@ -40,12 +40,29 @@ const TimerDisplay = props => {
             // }
         }
 
+        // if(start && (totalSec % 60 === 0)){
+        //     setMin(totalSec / 60)
+        //     setSec(59)
+        // }
+        // else if(start && (totalSec % 60 !== 0)){
+        //     setSec(sec - 1)
+        // }
+
         if(!pauseCount && oneXButton){
-            setTimeout( () => {
-                setSec(sec - 1)
-                setTotalSec(totalSec - 1)
-                console.log('1X setTimeout and totalSec is ', totalSec)
-            }, 1000 )
+            if(start && (totalSec % 60 === 0)){
+                setTimeout( () => {
+                    setMin((totalSec / 60) - 1)
+                    setSec(59)
+                    setTotalSec(totalSec - 1)
+                    console.log('1X setTimeout and totalSec is ', totalSec)
+                }, 1000 )
+            } else {
+                setTimeout( () => {
+                    setSec(sec - 1)
+                    setTotalSec(totalSec - 1)
+                    console.log('1X setTimeout and totalSec is ', totalSec)
+                }, 1000 )
+            }
         }
 
         if(!pauseCount && onePointFiveXButton){
